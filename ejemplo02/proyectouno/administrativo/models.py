@@ -25,3 +25,11 @@ class Estudiante(models.Model):
                 self.cedula,
                 self.edad,
                 self.tipo_estudiante)
+
+class Pais (models.Model):
+    nombre = models.CharField("Nombre de paises", max_length=30)
+    capital = models.CharField("Nombre de capitales", max_length=30)
+    def __str__(self):
+        return "%s - %s - %s  %d" % (self.nombre,
+                self.capital,)
+
